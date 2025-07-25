@@ -4,7 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BEX Mining</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0d1117;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      text-align: center;
+      padding: 20px;
+      background: #161b22;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0, 183, 255, 0.4);
+      width: 90%;
+      max-width: 400px;
+    }
+    .logo {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #00bfff;
+    }
+    .balance-container {
+      margin-bottom: 15px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    #mine-btn {
+      background: #00bfff;
+      border: none;
+      padding: 12px 24px;
+      color: #000;
+      border-radius: 12px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: transform 0.1s ease;
+    }
+    #mine-btn:active {
+      transform: scale(0.95);
+    }
+    .info {
+      font-size: 14px;
+      color: #ccc;
+    }
+    .info p {
+      margin: 4px 0;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -19,6 +74,16 @@
       <p>Referral Bonus: 5%</p>
     </div>
   </div>
-  <script src="script.js"></script>
+
+  <script>
+    let balance = 0;
+    const hashrate = 1; // Default: 1 H/s
+    const bexPerTap = 0.01 * hashrate;
+
+    document.getElementById("mine-btn").addEventListener("click", () => {
+      balance += bexPerTap;
+      document.getElementById("balance").textContent = balance.toFixed(2) + " BEX";
+    });
+  </script>
 </body>
 </html>
