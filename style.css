@@ -1,0 +1,34 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem;
+}
+.container {
+  max-width: 400px;
+  margin: auto;
+}
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+#mine-btn {
+  background: #00bcd4;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.balance-container {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+.info {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  opacity: 0.8;
+}
